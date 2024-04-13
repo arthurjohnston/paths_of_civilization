@@ -5,9 +5,8 @@ import itertools
 class Cubes(Enum):
     WARRIOR = 1
     SCRIBE = 2
-    PEOPLE = 3
+    LEADER = 3
     RELIGION = 4
-    LEADER = 5
     MONUMENT = 6
     POW = 7
     POP = 8
@@ -279,15 +278,35 @@ yellow4 = Card(cost=TechAmount(Tech.YELLOW,10 ),
 
 yellows=[yellow1, yellow2,yellow3,yellow4]
 
-## todo green
+green1 = Card(cost=TechAmount(Tech.GREEN,1 ),
+    left=[CubeAmount(Cubes.LEADER)],
+    right=[TechAmount(Tech.YELLOW,1),TechAmount(Tech.BROWN,1)],
+    bonus=[CubeAmount(Cubes.POP)])
 
-greens = []
+green2 = Card(cost=TechAmount(Tech.GREEN,4 ),
+    left=[CubeAmount(Cubes.LEADER,1), CubeAmount(Cubes.SCRIBE,1)],
+    right=[TechAmount(Tech.YELLOW,2),TechAmount(Tech.BROWN,1)],
+    bonus=[CubeAmount(Cubes.POP,2),CubeAmount(Cubes.MONUMENT)])
+
+green3 = Card(cost=TechAmount(Tech.GREEN,7 ),
+    left=[CubeAmount(Cubes.LEADER,2), CubeAmount(Cubes.SCRIBE)],
+    right=[TechAmount(Tech.YELLOW,2),TechAmount(Tech.BROWN,2)],
+    bonus=[TechAmount(Tech.BLUE),CubeAmount(Cubes.POP,3),CubeAmount(Cubes.MONUMENT)])
+
+green4 = Card(cost=TechAmount(Tech.GREEN,10 ),
+    left=[CubeAmount(Cubes.SCRIBE,2), CubeAmount(Cubes.RELIGION),CubeAmount(Cubes.LEADER)],
+    right=[TechAmount(Tech.YELLOW,2),TechAmount(Tech.BROWN,3)],
+    bonus=[TechAmount(Tech.BLUE),CubeAmount(Cubes.POP,3),CubeAmount(Cubes.MONUMENT,2)])
+
+
+greens=[green1, green2,green3,green4]
+
 
 buyable_cards = [brown1, brown2, brown3, brown4,
                 red1, red2, red3,red4,
                 blue1,blue2, blue3, blue4, 
                 yellow1, yellow2,yellow3,yellow4
-                #,green1, green2, green3, green4,
+                ,green1, green2, green3, green4
                 ]
 ## starting
 
@@ -365,59 +384,64 @@ class PlayerState:
 
 
 
-starting_hand = [brown0,red0,yellow0,blue0,green0]
-starting =PlayerState(starting_hand)
-starting.events.append("Turn 1")
-
+turn_1_hand = [brown0,red0,yellow0,blue0,green0]
+turn_1_player_state =PlayerState(turn_1_hand) #todo add board specific bonus
+starts_of_turn = [turn_1_player_state]
 next_turn_starts=[]
-# step 1 generate all 30 card placements for this hand
-combinations = get_card_combinations(starting.hand)
+for turn in range(1,3):
+    for starting in starts_of_turn:
+        starting.events.append(f"Turn {turn}")
+        # step 1 generate all 30 card placements for this hand
+        combinations = get_card_combinations(starting.hand)
+        
+        card_placements = []
+        for left_group, right_group, discard in combinations:
+            card_placement=starting.deep_copy()
+            # step 2 remove discarded card
+            # todo this should save for final game scoring 
+            for card in discard:
+                card_placement.events.append("\tDiscard:"+str(card))
+                #card_placement.hand.remove(card)
+                card_placement.remove_card_from_hand(card)
+            
+            # step 3 add left resource
+            # todo add population check
+            for card in left_group:
+                card_placement.events.append("\tLeft:"+str(card))
+                for cube in card.left:
+                    card_placement.add_cube_amount(cube)
+            # Step 4 buy wonders & leaders
+        
+            # Step 5 add right resource
+            # todo add pop check
+            for card in right_group:
+                card_placement.events.append("\tRight:"+str(card))
+                for tech in card.right:
+                    card_placement.add_tech_amount(tech)
+            #step 6 buy card
+            #check which techs you have enough of
+            
+            for card in buyable_cards:
+                if card_placement.has_enought_tech(card.cost):
+                    print("can afford card")
+                    next_turn_starting = card_placement.deep_copy()
+                    next_turn_starting.add_card_to_hand(card)
+                    next_turn_starting.events.append("\tBought:"+str(card))
+                    next_turn_starting.remove_tech_amount(card.cost)
+                    for bonus in  card.bonus:
+                        if isinstance(bonus, TechAmount):
+                            next_turn_starting.add_tech_amount(bonus)
+                        elif isinstance(bonus, CubeAmount):
+                            next_turn_starting.add_cube_amount(bonus)
+                        else:
+                            print("something bad"+bonus)
+                    print(next_turn_starting)
+                    next_turn_starts.append(next_turn_starting)
+                    print("---------")
+        print(f"At end of {turn} there are{len(next_turn_starts)} possible")
+        # copy over the starts for next turn and reset next_turn_starts to 
+        # be used for the following turn
+        starts_of_turn=next_turn_starts
+        next_turn_starts=[] #reset possibilities for next 
 
-card_placements = []
-for left_group, right_group, discard in combinations:
-    card_placement=starting.deep_copy()
-    # step 2 remove discarded card
-    # todo this should save for final game scoring 
-    for card in discard:
-        card_placement.events.append("\tDiscard:"+str(card))
-        #card_placement.hand.remove(card)
-        card_placement.remove_card_from_hand(card)
-    
-    # step 3 add left resource
-    # todo add population check
-    for card in left_group:
-        card_placement.events.append("\tLeft:"+str(card))
-        for cube in card.left:
-            card_placement.add_cube_amount(cube)
-    # Step 4 buy wonders & leaders
-
-    # Step 5 add right resource
-    # todo add pop check
-    for card in right_group:
-        card_placement.events.append("\tRight:"+str(card))
-        for tech in card.right:
-            card_placement.add_tech_amount(tech)
-    #step 6 buy card
-    #check which techs you have enough of
-    
-    for card in buyable_cards:
-        if card_placement.has_enought_tech(card.cost):
-            print("can afford card")
-            next_turn_starting = card_placement.deep_copy()
-            next_turn_starting.add_card_to_hand(card)
-            next_turn_starting.events.append("\tBought:"+str(card))
-            next_turn_starting.remove_tech_amount(card.cost)
-            for bonus in  card.bonus:
-                if isinstance(bonus, TechAmount):
-                    next_turn_starting.add_tech_amount(bonus)
-                elif isinstance(bonus, CubeAmount):
-                    next_turn_starting.add_cube_amount(bonus)
-                else:
-                    print("something bad"+bonus)
-            print(next_turn_starting)
-            next_turn_starts.append(next_turn_starting)
-    print("---------")
-
-print(len(next_turn_starts))
-print(len(combinations))
 # Example usage
