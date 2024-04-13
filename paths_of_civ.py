@@ -281,7 +281,14 @@ yellows=[yellow1, yellow2,yellow3,yellow4]
 
 ## todo green
 
+greens = []
 
+buyable_cards = [brown1, brown2, brown3, brown4,
+                red1, red2, red3,red4,
+                blue1,blue2, blue3, blue4, 
+                yellow1, yellow2,yellow3,yellow4
+                #,green1, green2, green3, green4,
+                ]
 ## starting
 
 brown0  = Card(cost=TechAmount(Tech.BROWN,0),left=[],
@@ -311,29 +318,36 @@ class PlayerState:
     def remove_card_from_hand(self, card):
         self.hand.remove(card)
 
-    def add_tech_amount(self, tech, amount):
-        if tech in self.tech_dict:
-            self.tech_dict[tech] += amount
+    def add_tech_amount(self, tech):
+        if tech.type in self.tech_dict:
+            self.tech_dict[tech.type] += tech.value
         else:
-            self.tech_dict[tech] = amount
+            self.tech_dict[tech.type] = tech.value
 
-    def remove_tech_amount(self, tech, amount):
-        if tech in self.tech_dict:
-            self.tech_dict[tech] -= amount
-            if self.tech_dict[tech].value <= 0:
-                del self.tech_dict[tech]
-
-    def add_cube_amount(self, cube, amount):
-        if cube in self.cube_dict:
-            self.cube_dict[cube] += amount
+    def remove_tech_amount(self, tech):
+        if tech.type in self.tech_dict:
+            self.tech_dict[tech.type] -= tech.value
+            if self.tech_dict[tech.type] <= 0:
+                del self.tech_dict[tech.type]
+    
+    def has_enought_tech(self, tech):
+        if tech.type in self.tech_dict:
+            return self.tech_dict[tech.type] >= tech.value
         else:
-            self.cube_dict[cube] = amount
+            return False
 
-    def remove_cube_amount(self, cube, amount):
-        if cube in self.cube_dict:
-            self.cube_dict[cube] -= amount
-            if self.cube_dict[cube].value <= 0:
-                del self.cube_dict[cube]
+    def add_cube_amount(self, cube):
+        if cube.type in self.cube_dict:
+            self.cube_dict[cube.type] += cube.value
+        else:
+            self.cube_dict[cube.type] = cube.value
+
+    def remove_cube_amount(self, cube):
+        if cube.type in self.cube_dict:
+            self.cube_dict[cube.type] -= cube.value
+            if self.cube_dict[cube.type] <= 0:
+                del self.cube_dict[cube.type]
+
 
     def add_event(self, event):
         self.events.append(event)
@@ -342,10 +356,11 @@ class PlayerState:
         return copy.deepcopy(self)
 
     def __str__(self):
-        tech_str = "\n".join([f"{tech}: {amount}" for tech, amount in self.tech_dict.items()])
-        cube_str = "\n".join([f"{cube}: {amount}" for cube, amount in self.cube_dict.items()])
-        events_str = "\n".join(self.events)
-        return f"Hand: {self.hand}\nTech:\n{tech_str}\nCubes:\n{cube_str}\nEvents:\n{events_str}"
+        tech_str = "\n".join([f"\t{tech}: {amount}" for tech, amount in self.tech_dict.items()])
+        cube_str = "\n".join([f"\t{cube}: {amount}" for cube, amount in self.cube_dict.items()])
+        events_str = "\n\t".join(self.events)
+        hand_str = "\n".join(f"\t{card}" for card in self.hand)
+        return f"Hand: {hand_str}\nTech:\n{tech_str}\nCubes:\n{cube_str}\nEvents:\n{events_str}"
 
 
 
@@ -353,31 +368,49 @@ class PlayerState:
 starting_hand = [brown0,red0,yellow0,blue0,green0]
 starting =PlayerState(starting_hand)
 starting.events.append("Turn 1")
+
+next_turn_starts=[]
 # step 1 generate all 30 card placements for this hand
 combinations = get_card_combinations(starting.hand)
-new_player_states = []
-for left_group, right_group, discard in combinations:
-    new_player_state=starting.deep_copy()
-    print(new_player_state)
-    for card in left_group:
-        new_player_state.events.append("Left:"+str(card))
-    for card in right_group:
-        new_player_state.events.append("Right:"+str(card))
-    for card in discard:
-        print("Discard")
-        new_player_state.events.append("Discard:"+str(card))
-        #step 2 remove discarded card
-        for x in new_player_state.hand:
-            print(hash(x))
-            print(x)
-        print(card)
-        print(hash(card))
-        new_player_state.hand.remove(card)
-        print(len(new_player_state.hand))
-        #new_player_state.remove_card_from_hand(card)
 
-    #step3
+card_placements = []
+for left_group, right_group, discard in combinations:
+    card_placement=starting.deep_copy()
+    # step 2 remove discarded card
+    # todo this should save for final game scoring 
+    for card in discard:
+        card_placement.events.append("\tDiscard:"+str(card))
+        #card_placement.hand.remove(card)
+        card_placement.remove_card_from_hand(card)
+    
+    # step 3 add left resource
+    # todo add population check
+    for card in left_group:
+        card_placement.events.append("\tLeft:"+str(card))
+        for cube in card.left:
+            card_placement.add_cube_amount(cube)
+    # Step 4 buy wonders & leaders
+
+    # Step 5 add right resource
+    # todo add pop check
+    for card in right_group:
+        card_placement.events.append("\tRight:"+str(card))
+        for tech in card.right:
+            card_placement.add_tech_amount(tech)
+    #step 6 buy card
+    #check which techs you have enough of
+    
+    for card in buyable_cards:
+        if card_placement.has_enought_tech(card.cost):
+            print("can afford card")
+            next_turn_starting = card_placement.deep_copy()
+            next_turn_starting.add_card_to_hand(card)
+            next_turn_starting.events.append("\tBought:"+str(card))
+            next_turn_starting.remove_tech_amount(card.cost)
+            print(next_turn_starting)
+            next_turn_starts.append(next_turn_starting)
     print("---------")
 
+print(len(next_turn_starts))
 print(len(combinations))
 # Example usage
