@@ -1,5 +1,6 @@
 from enum import Enum
 import itertools
+import copy
 
 # Enum for cubes
 class Cubes(Enum):
@@ -322,8 +323,20 @@ blue0  = Card(cost=TechAmount(Tech.BLUE,0),left=[],
 green0  = Card(cost=TechAmount(Tech.GREEN,0),left=[],
     right=[TechAmount(Tech.GREEN)], bonus=[])
 
-import copy
 
+#    0:4,
+#    1:5, leader
+#    2: 6
+#    3: leader
+#    4: 7
+#    5:leader
+#    6: 8 leader
+#    7: leader
+#    8: leader 9
+#    9: 1 vp
+#    10:10, 2 vp
+#    +1 up to 12 
+#
 class PlayerState:
     def __init__(self,hand):
         self.hand = hand
@@ -367,6 +380,13 @@ class PlayerState:
             if self.cube_dict[cube.type] <= 0:
                 del self.cube_dict[cube.type]
 
+    def tech_score(self):
+        score = 0
+        for card in self.hand:
+            score += card.cost.value
+        for key, value in self.tech_dict.items():
+            score += value
+        return score
 
     def add_event(self, event):
         self.events.append(event)
@@ -423,7 +443,7 @@ for turn in range(1,3):
             
             for card in buyable_cards:
                 if card_placement.has_enought_tech(card.cost):
-                    print("can afford card")
+                    #print("can afford card")
                     next_turn_starting = card_placement.deep_copy()
                     next_turn_starting.add_card_to_hand(card)
                     next_turn_starting.events.append("\tBought:"+str(card))
@@ -435,13 +455,18 @@ for turn in range(1,3):
                             next_turn_starting.add_cube_amount(bonus)
                         else:
                             print("something bad"+bonus)
-                    print(next_turn_starting)
+                    #print(next_turn_starting)
                     next_turn_starts.append(next_turn_starting)
-                    print("---------")
-        print(f"At end of {turn} there are{len(next_turn_starts)} possible")
+                    #print("---------")
+    print(f"At end of {turn} there are {len(next_turn_starts)} possible")
         # copy over the starts for next turn and reset next_turn_starts to 
         # be used for the following turn
-        starts_of_turn=next_turn_starts
-        next_turn_starts=[] #reset possibilities for next 
+    starts_of_turn=next_turn_starts
+    next_turn_starts=[] #reset possibilities for next 
 
-# Example usage
+sorted_objects = sorted(starts_of_turn, key=lambda obj: obj.tech_score(), reverse=True)
+
+# Print the top ten objects
+for i, obj in enumerate(sorted_objects[:10], start=1):
+    print(f"{obj} - Tech Score: {obj.tech_score()}")
+    print("-----------------------------------")
