@@ -407,6 +407,13 @@ for left_group, right_group, discard in combinations:
             next_turn_starting.add_card_to_hand(card)
             next_turn_starting.events.append("\tBought:"+str(card))
             next_turn_starting.remove_tech_amount(card.cost)
+            for bonus in  card.bonus:
+                if isinstance(bonus, TechAmount):
+                    next_turn_starting.add_tech_amount(bonus)
+                elif isinstance(bonus, CubeAmount):
+                    next_turn_starting.add_cube_amount(bonus)
+                else:
+                    print("something bad"+bonus)
             print(next_turn_starting)
             next_turn_starts.append(next_turn_starting)
     print("---------")
