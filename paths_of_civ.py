@@ -408,7 +408,7 @@ turn_1_hand = [brown0,red0,yellow0,blue0,green0]
 turn_1_player_state =PlayerState(turn_1_hand) #todo add board specific bonus
 starts_of_turn = [turn_1_player_state]
 next_turn_starts=[]
-for turn in range(1,3):
+for turn in range(1,6):
     for starting in starts_of_turn:
         starting.events.append(f"Turn {turn}")
         # step 1 generate all 30 card placements for this hand
@@ -416,7 +416,7 @@ for turn in range(1,3):
         
         card_placements = []
         for left_group, right_group, discard in combinations:
-            card_placement=starting.deep_copy()
+            card_placement=starting#.deep_copy()
             # step 2 remove discarded card
             # todo this should save for final game scoring 
             for card in discard:
@@ -444,7 +444,7 @@ for turn in range(1,3):
             for card in buyable_cards:
                 if card_placement.has_enought_tech(card.cost):
                     #print("can afford card")
-                    next_turn_starting = card_placement.deep_copy()
+                    next_turn_starting = card_placement#.deep_copy()
                     next_turn_starting.add_card_to_hand(card)
                     next_turn_starting.events.append("\tBought:"+str(card))
                     next_turn_starting.remove_tech_amount(card.cost)
