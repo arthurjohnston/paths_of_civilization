@@ -285,12 +285,26 @@ green4 = Card(cost=TechAmount(Tech.GREEN,10 ),
 greens=[green1, green2,green3,green4]
 
 
-buyable_cards = [brown1, brown2, brown3, brown4,
-                red1, red2, red3,red4,
-                blue1,blue2, blue3, blue4, 
-                yellow1, yellow2,yellow3,yellow4
-                ,green1, green2, green3, green4
-                ]
+buyable_cards = { "brown1":brown1
+,"brown2":brown2
+,"brown3":brown3
+,"brown4":brown4
+,"red1":red1
+,"red2":red2
+,"red3":red3
+,"red4":red4
+,"blue1":blue1
+,"blue2":blue2
+,"blue3":blue3
+,"blue4":blue4
+,"yellow1":yellow1
+,"yellow2":yellow2
+,"yellow3":yellow3
+,"yellow4":yellow4
+,"green1":green1
+,"green2":green2
+,"green3":green3
+,"green4":green4}
 
 ## starting
 
@@ -305,3 +319,14 @@ blue0  = Card(cost=TechAmount(Tech.BLUE,0),left=[],
     right=[TechAmount(Tech.BLUE)], bonus=[])
 green0  = Card(cost=TechAmount(Tech.GREEN,0),left=[],
     right=[TechAmount(Tech.GREEN)], bonus=[])
+
+
+starting_cards = {
+    "brown0":brown0,
+    "red0":red0,
+    "yelllow0":yellow0,
+    "blue0":blue0,
+    "green0":green0
+}
+
+playable_cards = {**buyable_cards, **starting_cards}

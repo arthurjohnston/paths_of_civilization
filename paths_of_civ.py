@@ -39,11 +39,11 @@ class PlayerState:
         self.cube_dict = {}
         self.events = []
 
-    def add_card_to_hand(self, card):
-        self.hand.append(card)
+    def add_card_to_hand(self, card_name):
+        self.hand.append(card_name)
 
-    def remove_card_from_hand(self, card):
-        self.hand.remove(card)
+    def remove_card_from_hand(self, card_name):
+        self.hand.remove(card_name)
 
     def add_tech_amount(self, tech):
         if tech.type in self.tech_dict:
@@ -77,8 +77,8 @@ class PlayerState:
 
     def tech_score(self):
         score = 0
-        for card in self.hand:
-            score += card.cost.value
+        for card_name in self.hand:
+            score += playable_cards[card_name].cost.value
         for key, value in self.tech_dict.items():
             score += value
         return score
@@ -99,7 +99,7 @@ class PlayerState:
 
 
 
-turn_1_hand = [brown0,red0,yellow0,blue0,green0]
+turn_1_hand = list(starting_cards.keys())
 turn_1_player_state =PlayerState(turn_1_hand) #todo add board specific bonus
 starts_of_turn = [turn_1_player_state]
 next_turn_starts=[]
@@ -114,34 +114,34 @@ for turn in range(1,3):
             card_placement=starting.deep_copy()
             # step 2 remove discarded card
             # todo this should save for final game scoring 
-            for card in discard:
-                card_placement.events.append("\tDiscard:"+str(card))
+            for card_name in discard:
+                card_placement.events.append("\tDiscard:"+str(card_name))
                 #card_placement.hand.remove(card)
-                card_placement.remove_card_from_hand(card)
+                card_placement.remove_card_from_hand(card_name)
             
             # step 3 add left resource
             # todo add population check
-            for card in left_group:
-                card_placement.events.append("\tLeft:"+str(card))
-                for cube in card.left:
+            for card_name in left_group:
+                card_placement.events.append("\tLeft:"+str(card_name))
+                for cube in playable_cards[card_name].left:
                     card_placement.add_cube_amount(cube)
             # Step 4 buy wonders & leaders
         
             # Step 5 add right resource
             # todo add pop check
-            for card in right_group:
-                card_placement.events.append("\tRight:"+str(card))
-                for tech in card.right:
+            for card_name in right_group:
+                card_placement.events.append("\tRight:"+str(card_name))
+                for tech in playable_cards[card_name].right:
                     card_placement.add_tech_amount(tech)
             #step 6 buy card
             #check which techs you have enough of
             
-            for card in buyable_cards:
+            for card_name, card in buyable_cards.items():
                 if card_placement.has_enought_tech(card.cost):
                     #print("can afford card")
                     next_turn_starting = card_placement.deep_copy()
-                    next_turn_starting.add_card_to_hand(card)
-                    next_turn_starting.events.append("\tBought:"+str(card))
+                    next_turn_starting.add_card_to_hand(card_name)
+                    next_turn_starting.events.append("\tBought:"+str(card_name))
                     next_turn_starting.remove_tech_amount(card.cost)
                     for bonus in  card.bonus:
                         if isinstance(bonus, TechAmount):
