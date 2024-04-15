@@ -39,6 +39,16 @@ class PlayerState:
         self.cube_dict = {}
         self.events = []
 
+    def __eq__(self, other):
+        if isinstance(other, PlayerState):
+            return (self.hand == other.hand and
+                    self.tech_dict == other.tech_dict and
+                    self.cube_dict == other.cube_dict)
+        return False
+
+    def __hash__(self):
+        return hash((tuple(self.hand), frozenset(self.tech_dict.items()), frozenset(self.cube_dict.items())))
+
     def add_card_to_hand(self, card_name):
         self.hand.append(card_name)
 
@@ -102,8 +112,8 @@ class PlayerState:
 turn_1_hand = list(starting_cards.keys())
 turn_1_player_state =PlayerState(turn_1_hand) #todo add board specific bonus
 starts_of_turn = [turn_1_player_state]
-next_turn_starts=[]
-for turn in range(1,3):
+next_turn_starts=set()
+for turn in range(1,4):
     for starting in starts_of_turn:
         starting.events.append(f"Turn {turn}")
         # step 1 generate all 30 card placements for this hand
@@ -151,13 +161,13 @@ for turn in range(1,3):
                         else:
                             print("something bad"+bonus)
                     #print(next_turn_starting)
-                    next_turn_starts.append(next_turn_starting)
+                    next_turn_starts.add(next_turn_starting)
                     #print("---------")
     print(f"At end of {turn} there are {len(next_turn_starts)} possible")
         # copy over the starts for next turn and reset next_turn_starts to 
         # be used for the following turn
     starts_of_turn=next_turn_starts
-    next_turn_starts=[] #reset possibilities for next 
+    next_turn_starts=set() #reset possibilities for next 
 
 sorted_objects = sorted(starts_of_turn, key=lambda obj: obj.tech_score(), reverse=True)
 
