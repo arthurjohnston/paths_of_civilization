@@ -148,18 +148,22 @@ class PlayerState:
         hand_str = "\n".join(f"\t{card}" for card in self.hand)
         return f"Hand: {hand_str}\nTech:\n{tech_str}\nCubes:\n{cube_str}\nEvents:\n{events_str}"
 
-
+    def copy(self):
+        new_state = PlayerState(copy.deepcopy(self.hand))
+        new_state.tech_dict = copy.deepcopy(self.tech_dict)
+        new_state.cube_dict = copy.deepcopy(self.cube_dict)
+        return new_state
 
 def runCode():
     turn_1_hand = list(starting_cards.keys())
     turn_1_player_state =PlayerState(turn_1_hand) #todo add board specific bonus
     starts_of_turn = [turn_1_player_state]
     next_turn_starts=set()
-    for turn in range(1,6):
+    for turn in range(1,5):
         for starting in starts_of_turn:
             starting.events.append(f"Turn {turn}")
             # step 1 generate all 30 card placements for this hand
-            combinations = get_card_combinations(starting.hand)[:10]
+            combinations = get_card_combinations(starting.hand)
             
             card_placements = []
             for left_group, right_group, discard in combinations:
@@ -193,7 +197,7 @@ def runCode():
                 for card_name, card in buyable_cards.items():
                     if card_placement.has_enought_tech(card.cost):
                         #print("can afford card")
-                        next_turn_starting = card_placement.deep_copy()
+                        next_turn_starting = card_placement.copy()
                         next_turn_starting.add_card_to_hand(card_name)
                         next_turn_starting.events.append("\tBought:"+str(card_name))
                         next_turn_starting.remove_tech_amount(card.cost)
@@ -222,4 +226,4 @@ def runCode():
         print("-----------------------------------")
 
 if __name__ == '__main__':
-    cProfile.run('runCode()')
+    runCode()
