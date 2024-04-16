@@ -11,6 +11,10 @@ class Cubes(Enum):
     MONUMENT = 6
     POW = 7
     POP = 8
+    def __lt__(self, other):
+        if isinstance(other, Cubes):
+            return self.value < other.value
+        raise TypeError("Comparison with non-Cubes enum")
 
 # Enum for tech
 class Tech(Enum):
@@ -19,7 +23,10 @@ class Tech(Enum):
     YELLOW = 3
     BLUE = 4
     RED = 5
-    
+    def __lt__(self, other):
+        if isinstance(other, Tech):
+            return self.value < other.value
+        raise TypeError("Comparison with non-Tech enum")
 # TechAmount class to represent cost tuple for tech
 class TechAmount:
     def __init__(self,  type: Tech, value: int=1):
