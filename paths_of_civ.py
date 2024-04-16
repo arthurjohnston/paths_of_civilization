@@ -124,8 +124,11 @@ class PlayerState:
                 del self.cubes[cube.type]
 
     def tech_score(self):
-        score = sum(playable_cards[card_name].cost.value for card_name in self.hand.elements())
-        score += sum(self.techs.values())
+        score = 0
+        for card_name in self.hand.elements():
+                for tech in playable_cards[card_name].right:
+                    score += tech.value
+        #score += sum(self.techs.values())
         return score
 
     def add_event(self, event):
@@ -153,19 +156,19 @@ def runCode():
     turn_1_player_state =PlayerState(turn_1_hand) #todo add board specific bonus
     starts_of_turn = [turn_1_player_state]
     next_turn_starts=set()
-    for turn in range(1,6):
+    for turn in range(1,4):
         for starting in starts_of_turn:
             starting.events.append(f"Turn {turn}")
             # step 1 generate all 30 card placements for this hand
             combinations = get_card_combinations(starting.convert_hand_to_list())
+            # before turn 5 you should only dump level 0 cards
+            if turn < 5:
+                combinations = {entry for entry in combinations if  entry[2][0].endswith('0')}
             
-            card_placements = []
             for left_group, right_group, discard in combinations:
                 card_placement=starting.deepcopy()
                 # step 2 remove discarded card
                 # todo this should save for final game scoring 
-                if(len(discard)==0):
-                    raise Exception(starting.hand)
                 for card_name in discard:
                     card_placement.events.append("\tDiscard:"+str(card_name))
                     #card_placement.hand.remove(card)
@@ -217,6 +220,9 @@ def runCode():
     
     # Print the top ten objects
     for i, obj in enumerate(sorted_objects[:50]):
+        print(f"{obj} - \nTech Score: {obj.tech_score()}")
+        print("-----------------------------------")
+    for i, obj in enumerate(sorted_objects[-10:]):
         print(f"{obj} - \nTech Score: {obj.tech_score()}")
         print("-----------------------------------")
 
