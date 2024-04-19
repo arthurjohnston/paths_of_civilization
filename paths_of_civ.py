@@ -127,8 +127,12 @@ class PlayerState:
         score = 0
         for card_name in self.hand.elements():
                 for tech in playable_cards[card_name].right:
-                    score += tech.value
+                    score += tech.value * 3
         #score += sum(self.techs.values())
+        for cube, value in self.cubes.items():
+            score += value/ 2
+        for tech, value in self.techs.items():
+            score += value/ 2
         return score
 
     def add_event(self, event):
@@ -151,12 +155,35 @@ class PlayerState:
         new_state.cubes = copy.deepcopy(self.cubes)
         return new_state
 
+def take10k(ranked_list):
+    top_1000 = ranked_list[:1000]
+    
+    # Calculate how many items to take from each section
+    num_sections = min(len(ranked_list) - 1000, 9000)
+    items_per_section = num_sections // 9000
+    extra_items = num_sections % 9000
+    
+    # Take items equally distributed across the rest of the list
+    distributed_items = []
+    start_index = 1000
+    end_index = 1000 + items_per_section + (1 if extra_items > 0 else 0)
+    for _ in range(9000):
+        distributed_items.extend(ranked_list[start_index:end_index])
+        start_index = end_index
+        end_index = start_index + items_per_section + (1 if extra_items > 0 else 0)
+        extra_items -= 1 if extra_items > 0 else 0
+    
+    # Combined list of top 1000 and equally distributed items
+    result = top_1000 + distributed_items
+    
+    return result
+    
 def runCode():
     turn_1_hand = list(starting_cards.keys())
     turn_1_player_state =PlayerState(turn_1_hand) #todo add board specific bonus
     starts_of_turn = [turn_1_player_state]
     next_turn_starts=set()
-    for turn in range(1,4):
+    for turn in range(1,8):
         for starting in starts_of_turn:
             starting.events.append(f"Turn {turn}")
             # step 1 generate all 30 card placements for this hand
@@ -212,7 +239,10 @@ def runCode():
         print(f"At end of {turn} there are {len(next_turn_starts)} possible")
             # copy over the starts for next turn and reset next_turn_starts to 
             # be used for the following turn
-        starts_of_turn=next_turn_starts
+        
+        starts_of_turn =take10k(sorted(next_turn_starts, key=lambda turn: turn.tech_score(), reverse=True))
+        print(f"At end of {turn} there are {len(starts_of_turn)} possible")
+        
         next_turn_starts=set() #reset possibilities for next 
     
     sorted_objects = sorted(starts_of_turn, key=lambda obj: obj.tech_score(), reverse=True)
@@ -222,7 +252,8 @@ def runCode():
     for i, obj in enumerate(sorted_objects[:50]):
         print(f"{obj} - \nTech Score: {obj.tech_score()}")
         print("-----------------------------------")
-    for i, obj in enumerate(sorted_objects[-10:]):
+    #  Print the worst
+    for i, obj in enumerate(sorted_objects[-1:]):
         print(f"{obj} - \nTech Score: {obj.tech_score()}")
         print("-----------------------------------")
 

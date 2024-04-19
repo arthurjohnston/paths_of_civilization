@@ -1,0 +1,2928 @@
+2024-04-18 16:31:38.855871
+At end of 1 there are 60 possible
+At end of 1 there are 60 possible
+2024-04-18 16:31:39.122578
+At end of 2 there are 2478 possible
+At end of 2 there are 2478 possible
+2024-04-18 16:31:50.226865
+At end of 3 there are 58820 possible
+At end of 3 there are 10000 possible
+2024-04-18 16:32:28.538656
+At end of 4 there are 302954 possible
+At end of 4 there are 10000 possible
+2024-04-18 16:34:19.384647
+At end of 5 there are 976057 possible
+At end of 5 there are 10000 possible
+2024-04-18 16:36:35.012595
+At end of 6 there are 1065011 possible
+At end of 6 there are 10000 possible
+2024-04-18 16:39:29.523462
+At end of 7 there are 1367084 possible
+At end of 7 there are 10000 possible
+Hand: ['blue2', 'brown2', 'green3', 'red4', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 2	Tech.YELLOW: 1	Tech.BLUE: 1
+Cubes:
+	Cubes.WARRIOR: 3	Cubes.SCRIBE: 4	Cubes.LEADER: 3	Cubes.RELIGION: 5	Cubes.MONUMENT: 4	Cubes.POW: 6	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:yellow1
+		Left:green3
+		Left:yellow2
+		Right:blue2
+		Right:brown2
+		Bought:red4 - 
+Tech Score: 72.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red4', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 2	Tech.YELLOW: 1	Tech.BLUE: 1
+Cubes:
+	Cubes.WARRIOR: 4	Cubes.SCRIBE: 3	Cubes.LEADER: 3	Cubes.RELIGION: 5	Cubes.MONUMENT: 4	Cubes.POW: 6	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:brown2
+		Left:red1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:red1
+		Left:green3
+		Left:yellow2
+		Right:blue2
+		Right:brown2
+		Bought:red4 - 
+Tech Score: 72.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'red4', 'yellow3']
+Tech:
+	Tech.BROWN: 2	Tech.GREEN: 2	Tech.YELLOW: 1
+Cubes:
+	Cubes.WARRIOR: 1	Cubes.SCRIBE: 9	Cubes.LEADER: 2	Cubes.RELIGION: 6	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 3
+Events:
+Turn 1
+		Discard:green0
+		Left:brown0
+		Left:red0
+		Right:blue0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:red0
+		Left:blue0
+		Left:brown0
+		Right:yelllow0
+		Right:yellow1
+		Bought:yellow1
+	Turn 3
+		Discard:yelllow0
+		Left:blue0
+		Left:brown0
+		Right:yellow1
+		Right:yellow1
+		Bought:blue2
+	Turn 4
+		Discard:blue0
+		Left:yellow1
+		Left:yellow1
+		Right:blue2
+		Right:brown0
+		Bought:green2
+	Turn 5
+		Discard:brown0
+		Left:yellow1
+		Left:yellow1
+		Right:blue2
+		Right:green2
+		Bought:brown2
+	Turn 6
+		Discard:yellow1
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green2
+		Bought:yellow3
+	Turn 7
+		Discard:yellow1
+		Left:green2
+		Left:yellow3
+		Right:blue2
+		Right:brown2
+		Bought:red4 - 
+Tech Score: 71.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red4', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 2	Tech.YELLOW: 1	Tech.BLUE: 1
+Cubes:
+	Cubes.WARRIOR: 4	Cubes.SCRIBE: 2	Cubes.LEADER: 3	Cubes.RELIGION: 5	Cubes.MONUMENT: 4	Cubes.POW: 6	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:green0
+		Left:blue0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:brown0
+		Left:blue0
+		Left:red0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:yelllow0
+		Left:blue0
+		Left:red0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:red0
+		Left:blue0
+		Left:red1
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yellow1
+		Left:blue0
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:blue0
+		Left:brown2
+		Left:red1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:red1
+		Left:green3
+		Left:yellow2
+		Right:blue2
+		Right:brown2
+		Bought:red4 - 
+Tech Score: 71.5
+-----------------------------------
+Hand: ['blue2', 'brown4', 'green2', 'red2', 'yellow3']
+Tech:
+	Tech.YELLOW: 2	Tech.BLUE: 2	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 2	Cubes.SCRIBE: 8	Cubes.RELIGION: 7	Cubes.MONUMENT: 5	Cubes.POW: 4	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:brown0
+		Left:green0
+		Left:red0
+		Right:blue0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:red0
+		Left:blue0
+		Left:green0
+		Right:yelllow0
+		Right:yellow1
+		Bought:yellow1
+	Turn 3
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:yellow1
+		Right:yellow1
+		Bought:blue2
+	Turn 4
+		Discard:green0
+		Left:yellow1
+		Left:yellow1
+		Right:blue2
+		Right:yelllow0
+		Bought:green2
+	Turn 5
+		Discard:yelllow0
+		Left:yellow1
+		Left:yellow1
+		Right:blue2
+		Right:green2
+		Bought:red2
+	Turn 6
+		Discard:yellow1
+		Left:blue2
+		Left:yellow1
+		Right:green2
+		Right:red2
+		Bought:yellow3
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:yellow3
+		Right:green2
+		Right:red2
+		Bought:brown4 - 
+Tech Score: 71.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red4', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 2	Tech.YELLOW: 1	Tech.BLUE: 1
+Cubes:
+	Cubes.WARRIOR: 2	Cubes.SCRIBE: 4	Cubes.LEADER: 3	Cubes.RELIGION: 5	Cubes.MONUMENT: 4	Cubes.POW: 6	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:yelllow0
+		Left:green0
+		Left:red1
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:red1
+		Left:green0
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:green0
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:yellow1
+		Left:green3
+		Left:yellow2
+		Right:blue2
+		Right:brown2
+		Bought:red4 - 
+Tech Score: 71.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'green3', 'red3']
+Tech:
+	Tech.BROWN: 2	Tech.YELLOW: 4	Tech.BLUE: 1	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 7	Cubes.SCRIBE: 2	Cubes.LEADER: 2	Cubes.RELIGION: 4	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 5
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:green3
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:red1
+		Left:blue2
+		Left:red3
+		Right:brown2
+		Right:green3
+		Bought:green2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 2	Tech.YELLOW: 1	Tech.BLUE: 1	Tech.RED: 3
+Cubes:
+	Cubes.WARRIOR: 6	Cubes.SCRIBE: 2	Cubes.LEADER: 3	Cubes.RELIGION: 3	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:green3
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:red1
+		Left:brown2
+		Left:red3
+		Right:blue2
+		Right:green3
+		Bought:yellow2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 2	Tech.YELLOW: 1	Tech.BLUE: 1	Tech.RED: 3
+Cubes:
+	Cubes.WARRIOR: 5	Cubes.SCRIBE: 3	Cubes.LEADER: 3	Cubes.RELIGION: 3	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:green3
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:yellow1
+		Left:brown2
+		Left:red3
+		Right:blue2
+		Right:green3
+		Bought:yellow2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'brown2', 'green3', 'red3']
+Tech:
+	Tech.GREEN: 2	Tech.YELLOW: 4	Tech.BLUE: 3
+Cubes:
+	Cubes.WARRIOR: 4	Cubes.SCRIBE: 3	Cubes.LEADER: 3	Cubes.RELIGION: 4	Cubes.MONUMENT: 6	Cubes.POW: 6	Cubes.POP: 3
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:green3
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:brown2
+		Right:green3
+		Right:red3
+		Bought:brown2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'green3', 'red3']
+Tech:
+	Tech.YELLOW: 3	Tech.BLUE: 1	Tech.RED: 3
+Cubes:
+	Cubes.WARRIOR: 5	Cubes.SCRIBE: 4	Cubes.LEADER: 4	Cubes.RELIGION: 3	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 5
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:green3
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:yellow1
+		Left:green3
+		Left:red3
+		Right:blue2
+		Right:brown2
+		Bought:green2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 4	Tech.BLUE: 1	Tech.RED: 2
+Cubes:
+	Cubes.WARRIOR: 6	Cubes.SCRIBE: 3	Cubes.LEADER: 2	Cubes.RELIGION: 4	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:green3
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:red3
+		Right:brown2
+		Right:green3
+		Bought:yellow2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'green3', 'red3']
+Tech:
+	Tech.BROWN: 2	Tech.YELLOW: 2	Tech.BLUE: 3	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 5	Cubes.SCRIBE: 3	Cubes.LEADER: 4	Cubes.RELIGION: 4	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 5
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:green3
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:red1
+		Left:blue2
+		Left:green3
+		Right:brown2
+		Right:red3
+		Bought:green2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'green3', 'red3']
+Tech:
+	Tech.YELLOW: 3	Tech.BLUE: 1	Tech.RED: 3
+Cubes:
+	Cubes.WARRIOR: 6	Cubes.SCRIBE: 3	Cubes.LEADER: 4	Cubes.RELIGION: 3	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 5
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:green3
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:red1
+		Left:green3
+		Left:red3
+		Right:blue2
+		Right:brown2
+		Bought:green2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 5	Tech.GREEN: 2	Tech.BLUE: 3	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 5	Cubes.SCRIBE: 2	Cubes.LEADER: 3	Cubes.RELIGION: 4	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:green3
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:red1
+		Left:blue2
+		Left:brown2
+		Right:green3
+		Right:red3
+		Bought:yellow2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 5	Tech.GREEN: 2	Tech.BLUE: 3	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 4	Cubes.SCRIBE: 3	Cubes.LEADER: 3	Cubes.RELIGION: 4	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:green3
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:brown2
+		Right:green3
+		Right:red3
+		Bought:yellow2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'green3', 'red3']
+Tech:
+	Tech.BROWN: 2	Tech.YELLOW: 2	Tech.BLUE: 3	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 4	Cubes.SCRIBE: 4	Cubes.LEADER: 4	Cubes.RELIGION: 4	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 5
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:green3
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:green3
+		Right:brown2
+		Right:red3
+		Bought:green2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'brown2', 'green3', 'red3']
+Tech:
+	Tech.GREEN: 2	Tech.YELLOW: 4	Tech.BLUE: 3
+Cubes:
+	Cubes.WARRIOR: 5	Cubes.SCRIBE: 2	Cubes.LEADER: 3	Cubes.RELIGION: 4	Cubes.MONUMENT: 6	Cubes.POW: 6	Cubes.POP: 3
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:green3
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:red1
+		Left:blue2
+		Left:brown2
+		Right:green3
+		Right:red3
+		Bought:brown2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'green3', 'red3']
+Tech:
+	Tech.BROWN: 2	Tech.YELLOW: 4	Tech.BLUE: 1	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 6	Cubes.SCRIBE: 3	Cubes.LEADER: 2	Cubes.RELIGION: 4	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 5
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:green3
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:red3
+		Right:brown2
+		Right:green3
+		Bought:green2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 4	Tech.BLUE: 1	Tech.RED: 2
+Cubes:
+	Cubes.WARRIOR: 7	Cubes.SCRIBE: 2	Cubes.LEADER: 2	Cubes.RELIGION: 4	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:green3
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:red1
+		Left:blue2
+		Left:red3
+		Right:brown2
+		Right:green3
+		Bought:yellow2 - 
+Tech Score: 70.0
+-----------------------------------
+Hand: ['blue2', 'brown3', 'green2', 'red3', 'yellow2']
+Tech:
+	Tech.GREEN: 1	Tech.YELLOW: 2	Tech.BLUE: 4	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 3	Cubes.SCRIBE: 4	Cubes.LEADER: 1	Cubes.RELIGION: 6	Cubes.MONUMENT: 7	Cubes.POW: 4	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:brown0
+		Left:blue0
+		Left:green0
+		Right:red0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:red0
+		Left:green0
+		Left:yelllow0
+		Right:blue0
+		Right:yellow1
+		Bought:brown1
+	Turn 3
+		Discard:yelllow0
+		Left:brown1
+		Left:green0
+		Right:blue0
+		Right:yellow1
+		Bought:blue2
+	Turn 4
+		Discard:blue0
+		Left:green0
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:green2
+	Turn 5
+		Discard:green0
+		Left:green2
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:red3
+	Turn 6
+		Discard:yellow1
+		Left:blue2
+		Left:brown1
+		Right:green2
+		Right:red3
+		Bought:yellow2
+	Turn 7
+		Discard:brown1
+		Left:blue2
+		Left:yellow2
+		Right:green2
+		Right:red3
+		Bought:brown3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 2	Tech.YELLOW: 1	Tech.BLUE: 1	Tech.RED: 3
+Cubes:
+	Cubes.WARRIOR: 3	Cubes.SCRIBE: 4	Cubes.LEADER: 3	Cubes.RELIGION: 4	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:yellow1
+		Left:green3
+		Left:yellow2
+		Right:blue2
+		Right:brown2
+		Bought:red3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 3	Tech.BLUE: 3	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 5	Cubes.SCRIBE: 2	Cubes.LEADER: 3	Cubes.RELIGION: 4	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:brown2
+		Left:red1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:red1
+		Left:blue2
+		Left:green3
+		Right:brown2
+		Right:yellow2
+		Bought:red3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'red4', 'yellow2']
+Tech:
+	Tech.BROWN: 1	Tech.GREEN: 1	Tech.YELLOW: 3	Tech.BLUE: 3
+Cubes:
+	Cubes.WARRIOR: 2	Cubes.SCRIBE: 6	Cubes.LEADER: 1	Cubes.RELIGION: 7	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 3
+Events:
+Turn 1
+		Discard:brown0
+		Left:green0
+		Left:red0
+		Right:blue0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:green0
+		Left:red0
+		Left:yelllow0
+		Right:blue0
+		Right:yellow1
+		Bought:brown1
+	Turn 3
+		Discard:yelllow0
+		Left:red0
+		Left:yellow1
+		Right:blue0
+		Right:brown1
+		Bought:blue2
+	Turn 4
+		Discard:red0
+		Left:blue0
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:green2
+	Turn 5
+		Discard:blue0
+		Left:brown1
+		Left:yellow1
+		Right:blue2
+		Right:green2
+		Bought:yellow2
+	Turn 6
+		Discard:yellow1
+		Left:green2
+		Left:yellow2
+		Right:blue2
+		Right:brown1
+		Bought:red4
+	Turn 7
+		Discard:brown1
+		Left:blue2
+		Left:yellow2
+		Right:green2
+		Right:red4
+		Bought:brown2 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 5	Tech.GREEN: 2	Tech.BLUE: 3	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 3	Cubes.SCRIBE: 3	Cubes.LEADER: 3	Cubes.RELIGION: 4	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:yelllow0
+		Left:green0
+		Left:red1
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:red1
+		Left:green0
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:green0
+		Left:green3
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:brown2
+		Right:green3
+		Right:red3
+		Bought:yellow2 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 5	Tech.GREEN: 2	Tech.YELLOW: 2	Tech.BLUE: 1
+Cubes:
+	Cubes.WARRIOR: 2	Cubes.SCRIBE: 5	Cubes.LEADER: 2	Cubes.RELIGION: 5	Cubes.MONUMENT: 5	Cubes.POW: 4	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:red0
+		Left:blue0
+		Left:green0
+		Right:brown0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:blue0
+		Left:green0
+		Left:yellow1
+		Right:brown0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:yellow1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:brown2
+		Left:yelllow0
+		Right:yellow1
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:yellow1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:yellow2
+		Right:brown2
+		Right:green3
+		Bought:red3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'green3', 'red3']
+Tech:
+	Tech.BROWN: 2	Tech.YELLOW: 4	Tech.BLUE: 1	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 7	Cubes.SCRIBE: 1	Cubes.LEADER: 2	Cubes.RELIGION: 4	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 5
+Events:
+Turn 1
+		Discard:green0
+		Left:blue0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:brown0
+		Left:blue0
+		Left:red0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:yelllow0
+		Left:blue0
+		Left:red0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:red0
+		Left:blue0
+		Left:red1
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yellow1
+		Left:blue0
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:blue0
+		Left:green3
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:red1
+		Left:blue2
+		Left:red3
+		Right:brown2
+		Right:green3
+		Bought:green2 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 2	Tech.YELLOW: 1	Tech.BLUE: 1	Tech.RED: 3
+Cubes:
+	Cubes.WARRIOR: 6	Cubes.SCRIBE: 1	Cubes.LEADER: 3	Cubes.RELIGION: 3	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:green0
+		Left:blue0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:brown0
+		Left:blue0
+		Left:red0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:yelllow0
+		Left:blue0
+		Left:red0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:red0
+		Left:blue0
+		Left:red1
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yellow1
+		Left:blue0
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:blue0
+		Left:green3
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:red1
+		Left:brown2
+		Left:red3
+		Right:blue2
+		Right:green3
+		Bought:yellow2 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red2', 'yellow3']
+Tech:
+	Tech.BROWN: 5	Tech.BLUE: 1	Tech.RED: 5
+Cubes:
+	Cubes.WARRIOR: 4	Cubes.SCRIBE: 2	Cubes.LEADER: 2	Cubes.RELIGION: 4	Cubes.MONUMENT: 6	Cubes.POW: 4	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:brown2
+		Left:red1
+		Right:blue2
+		Right:green3
+		Bought:red2
+	Turn 7
+		Discard:red1
+		Left:brown2
+		Left:red2
+		Right:blue2
+		Right:green3
+		Bought:yellow3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 4	Tech.BLUE: 1	Tech.RED: 2
+Cubes:
+	Cubes.WARRIOR: 5	Cubes.SCRIBE: 3	Cubes.LEADER: 2	Cubes.RELIGION: 4	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:yelllow0
+		Left:green0
+		Left:red1
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:red1
+		Left:green0
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:green0
+		Left:green3
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:red3
+		Right:brown2
+		Right:green3
+		Bought:yellow2 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'brown3', 'green3', 'red2']
+Tech:
+	Tech.YELLOW: 5	Tech.BLUE: 3
+Cubes:
+	Cubes.WARRIOR: 3	Cubes.SCRIBE: 2	Cubes.LEADER: 2	Cubes.RELIGION: 5	Cubes.MONUMENT: 8	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:blue2
+		Left:yellow1
+		Right:brown2
+		Right:red1
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green3
+		Bought:red2
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:brown2
+		Right:green3
+		Right:red2
+		Bought:brown3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 3	Tech.BLUE: 3
+Cubes:
+	Cubes.WARRIOR: 2	Cubes.SCRIBE: 5	Cubes.LEADER: 4	Cubes.RELIGION: 4	Cubes.MONUMENT: 5	Cubes.POW: 4	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:red0
+		Left:blue0
+		Left:green0
+		Right:brown0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:blue0
+		Left:green0
+		Left:yellow1
+		Right:brown0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:yellow1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:brown2
+		Left:yelllow0
+		Right:yellow1
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:yellow1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:green3
+		Right:brown2
+		Right:yellow2
+		Bought:red3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown3', 'green3', 'red2', 'yellow2']
+Tech:
+	Tech.YELLOW: 2	Tech.BLUE: 3	Tech.RED: 4
+Cubes:
+	Cubes.WARRIOR: 4	Cubes.SCRIBE: 2	Cubes.RELIGION: 6	Cubes.MONUMENT: 8	Cubes.POW: 3	Cubes.POP: 5
+Events:
+Turn 1
+		Discard:brown0
+		Left:green0
+		Left:red0
+		Right:blue0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:green0
+		Left:red0
+		Left:yelllow0
+		Right:blue0
+		Right:yellow1
+		Bought:brown1
+	Turn 3
+		Discard:blue0
+		Left:red0
+		Left:yelllow0
+		Right:brown1
+		Right:yellow1
+		Bought:blue2
+	Turn 4
+		Discard:red0
+		Left:yelllow0
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:red2
+	Turn 5
+		Discard:yelllow0
+		Left:blue2
+		Left:red2
+		Right:brown1
+		Right:yellow1
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:brown1
+		Left:red2
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:brown1
+		Left:blue2
+		Left:yellow2
+		Right:green3
+		Right:red2
+		Bought:brown3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'red4', 'yellow2']
+Tech:
+	Tech.GREEN: 1	Tech.YELLOW: 2	Tech.BLUE: 3	Tech.RED: 2
+Cubes:
+	Cubes.WARRIOR: 1	Cubes.SCRIBE: 7	Cubes.LEADER: 2	Cubes.RELIGION: 6	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 3
+Events:
+Turn 1
+		Discard:brown0
+		Left:green0
+		Left:red0
+		Right:blue0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:green0
+		Left:red0
+		Left:yelllow0
+		Right:blue0
+		Right:yellow1
+		Bought:brown1
+	Turn 3
+		Discard:yelllow0
+		Left:red0
+		Left:yellow1
+		Right:blue0
+		Right:brown1
+		Bought:blue2
+	Turn 4
+		Discard:red0
+		Left:blue0
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:green2
+	Turn 5
+		Discard:blue0
+		Left:brown1
+		Left:yellow1
+		Right:blue2
+		Right:green2
+		Bought:yellow2
+	Turn 6
+		Discard:yellow1
+		Left:green2
+		Left:yellow2
+		Right:blue2
+		Right:brown1
+		Bought:red4
+	Turn 7
+		Discard:brown1
+		Left:green2
+		Left:yellow2
+		Right:blue2
+		Right:red4
+		Bought:brown2 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'red4', 'yellow2']
+Tech:
+	Tech.GREEN: 2	Tech.YELLOW: 2	Tech.BLUE: 3	Tech.RED: 2
+Cubes:
+	Cubes.WARRIOR: 1	Cubes.SCRIBE: 6	Cubes.LEADER: 2	Cubes.RELIGION: 6	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 3
+Events:
+Turn 1
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:blue0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:yelllow0
+		Left:brown0
+		Left:green0
+		Right:blue0
+		Right:yellow1
+		Bought:brown1
+	Turn 3
+		Discard:brown0
+		Left:blue0
+		Left:green0
+		Right:brown1
+		Right:yellow1
+		Bought:blue2
+	Turn 4
+		Discard:blue0
+		Left:green0
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:green2
+	Turn 5
+		Discard:green0
+		Left:brown1
+		Left:yellow1
+		Right:blue2
+		Right:green2
+		Bought:yellow2
+	Turn 6
+		Discard:yellow1
+		Left:green2
+		Left:yellow2
+		Right:blue2
+		Right:brown1
+		Bought:red4
+	Turn 7
+		Discard:brown1
+		Left:green2
+		Left:yellow2
+		Right:blue2
+		Right:red4
+		Bought:brown2 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 5	Tech.GREEN: 1	Tech.YELLOW: 2	Tech.BLUE: 3
+Cubes:
+	Cubes.WARRIOR: 4	Cubes.SCRIBE: 2	Cubes.LEADER: 2	Cubes.RELIGION: 4	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:brown2
+		Right:green3
+		Right:yellow2
+		Bought:red3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 2	Tech.YELLOW: 1	Tech.BLUE: 1	Tech.RED: 3
+Cubes:
+	Cubes.WARRIOR: 4	Cubes.SCRIBE: 3	Cubes.LEADER: 3	Cubes.RELIGION: 4	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:brown2
+		Left:red1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:red1
+		Left:green3
+		Left:yellow2
+		Right:blue2
+		Right:brown2
+		Bought:red3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 1	Tech.YELLOW: 1	Tech.BLUE: 3	Tech.RED: 2
+Cubes:
+	Cubes.WARRIOR: 4	Cubes.SCRIBE: 2	Cubes.LEADER: 4	Cubes.RELIGION: 3	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:brown2
+		Left:red1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:red1
+		Left:brown2
+		Left:green3
+		Right:blue2
+		Right:yellow2
+		Bought:red3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red2', 'yellow3']
+Tech:
+	Tech.BROWN: 5	Tech.BLUE: 1	Tech.RED: 4
+Cubes:
+	Cubes.WARRIOR: 1	Cubes.SCRIBE: 5	Cubes.LEADER: 3	Cubes.RELIGION: 4	Cubes.MONUMENT: 7	Cubes.POW: 3	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:red0
+		Left:blue0
+		Left:green0
+		Right:brown0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:blue0
+		Left:green0
+		Left:yellow1
+		Right:brown0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:yellow1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:brown2
+		Left:yelllow0
+		Right:yellow1
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:yellow1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green3
+		Bought:red2
+	Turn 7
+		Discard:yellow1
+		Left:brown2
+		Left:red2
+		Right:blue2
+		Right:green3
+		Bought:yellow3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'green3', 'red3']
+Tech:
+	Tech.BROWN: 2	Tech.YELLOW: 2	Tech.BLUE: 3	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 5	Cubes.SCRIBE: 2	Cubes.LEADER: 4	Cubes.RELIGION: 4	Cubes.MONUMENT: 4	Cubes.POW: 5	Cubes.POP: 5
+Events:
+Turn 1
+		Discard:green0
+		Left:blue0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:brown0
+		Left:blue0
+		Left:red0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:yelllow0
+		Left:blue0
+		Left:red0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:red0
+		Left:blue0
+		Left:red1
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yellow1
+		Left:blue0
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:blue0
+		Left:green3
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:red1
+		Left:blue2
+		Left:green3
+		Right:brown2
+		Right:red3
+		Bought:green2 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 2	Tech.YELLOW: 1	Tech.BLUE: 1	Tech.RED: 2
+Cubes:
+	Cubes.WARRIOR: 1	Cubes.SCRIBE: 6	Cubes.LEADER: 4	Cubes.RELIGION: 4	Cubes.MONUMENT: 5	Cubes.POW: 4	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:red0
+		Left:blue0
+		Left:green0
+		Right:brown0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:blue0
+		Left:green0
+		Left:yellow1
+		Right:brown0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:yellow1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:brown2
+		Left:yelllow0
+		Right:yellow1
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:yellow1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:yellow1
+		Left:green3
+		Left:yellow2
+		Right:blue2
+		Right:brown2
+		Bought:red3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown3', 'green2', 'red3', 'yellow2']
+Tech:
+	Tech.GREEN: 1	Tech.YELLOW: 2	Tech.BLUE: 4	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 3	Cubes.SCRIBE: 6	Cubes.LEADER: 1	Cubes.RELIGION: 6	Cubes.MONUMENT: 5	Cubes.POW: 4	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:brown0
+		Left:green0
+		Left:red0
+		Right:blue0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:green0
+		Left:red0
+		Left:yelllow0
+		Right:blue0
+		Right:yellow1
+		Bought:brown1
+	Turn 3
+		Discard:yelllow0
+		Left:red0
+		Left:yellow1
+		Right:blue0
+		Right:brown1
+		Bought:blue2
+	Turn 4
+		Discard:red0
+		Left:blue0
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:green2
+	Turn 5
+		Discard:blue0
+		Left:green2
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:red3
+	Turn 6
+		Discard:brown1
+		Left:blue2
+		Left:yellow1
+		Right:green2
+		Right:red3
+		Bought:yellow2
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:yellow2
+		Right:green2
+		Right:red3
+		Bought:brown3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 5	Tech.YELLOW: 3	Tech.BLUE: 1	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 1	Cubes.SCRIBE: 5	Cubes.LEADER: 3	Cubes.RELIGION: 4	Cubes.MONUMENT: 6	Cubes.POW: 4	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:red0
+		Left:blue0
+		Left:green0
+		Right:brown0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:blue0
+		Left:green0
+		Left:yellow1
+		Right:brown0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:yellow1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:brown2
+		Left:yelllow0
+		Right:yellow1
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:yellow1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:yellow1
+		Left:brown2
+		Left:yellow2
+		Right:blue2
+		Right:green3
+		Bought:red3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'blue2', 'green2', 'red4', 'yellow2']
+Tech:
+	Tech.BROWN: 4	Tech.GREEN: 4	Tech.YELLOW: 1	Tech.BLUE: 1
+Cubes:
+	Cubes.WARRIOR: 2	Cubes.SCRIBE: 5	Cubes.LEADER: 2	Cubes.RELIGION: 8	Cubes.MONUMENT: 3	Cubes.POW: 4	Cubes.POP: 3
+Events:
+Turn 1
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:blue0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:yelllow0
+		Left:brown0
+		Left:green0
+		Right:blue0
+		Right:yellow1
+		Bought:brown1
+	Turn 3
+		Discard:brown0
+		Left:blue0
+		Left:green0
+		Right:brown1
+		Right:yellow1
+		Bought:blue2
+	Turn 4
+		Discard:blue0
+		Left:green0
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:green2
+	Turn 5
+		Discard:green0
+		Left:brown1
+		Left:yellow1
+		Right:blue2
+		Right:green2
+		Bought:yellow2
+	Turn 6
+		Discard:yellow1
+		Left:green2
+		Left:yellow2
+		Right:blue2
+		Right:brown1
+		Bought:red4
+	Turn 7
+		Discard:brown1
+		Left:blue2
+		Left:green2
+		Right:red4
+		Right:yellow2
+		Bought:blue2 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'brown2', 'green3', 'red3']
+Tech:
+	Tech.GREEN: 2	Tech.YELLOW: 4	Tech.BLUE: 3
+Cubes:
+	Cubes.WARRIOR: 5	Cubes.SCRIBE: 1	Cubes.LEADER: 3	Cubes.RELIGION: 4	Cubes.MONUMENT: 6	Cubes.POW: 6	Cubes.POP: 3
+Events:
+Turn 1
+		Discard:green0
+		Left:blue0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:brown0
+		Left:blue0
+		Left:red0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:yelllow0
+		Left:blue0
+		Left:red0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:red0
+		Left:blue0
+		Left:red1
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yellow1
+		Left:blue0
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:blue0
+		Left:green3
+		Left:red1
+		Right:blue2
+		Right:brown2
+		Bought:red3
+	Turn 7
+		Discard:red1
+		Left:blue2
+		Left:brown2
+		Right:green3
+		Right:red3
+		Bought:brown2 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 5	Tech.YELLOW: 3	Tech.BLUE: 1	Tech.RED: 2
+Cubes:
+	Cubes.WARRIOR: 4	Cubes.SCRIBE: 2	Cubes.LEADER: 2	Cubes.RELIGION: 4	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:yellow1
+		Left:brown2
+		Left:red1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:red1
+		Left:brown2
+		Left:yellow2
+		Right:blue2
+		Right:green3
+		Bought:red3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'blue2', 'green2', 'red4', 'yellow2']
+Tech:
+	Tech.BROWN: 4	Tech.GREEN: 3	Tech.YELLOW: 1	Tech.BLUE: 1
+Cubes:
+	Cubes.WARRIOR: 2	Cubes.SCRIBE: 5	Cubes.LEADER: 2	Cubes.RELIGION: 8	Cubes.MONUMENT: 4	Cubes.POW: 4	Cubes.POP: 3
+Events:
+Turn 1
+		Discard:brown0
+		Left:blue0
+		Left:green0
+		Right:red0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:red0
+		Left:green0
+		Left:yelllow0
+		Right:blue0
+		Right:yellow1
+		Bought:brown1
+	Turn 3
+		Discard:yelllow0
+		Left:brown1
+		Left:green0
+		Right:blue0
+		Right:yellow1
+		Bought:blue2
+	Turn 4
+		Discard:blue0
+		Left:green0
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:green2
+	Turn 5
+		Discard:green0
+		Left:brown1
+		Left:yellow1
+		Right:blue2
+		Right:green2
+		Bought:yellow2
+	Turn 6
+		Discard:yellow1
+		Left:green2
+		Left:yellow2
+		Right:blue2
+		Right:brown1
+		Bought:red4
+	Turn 7
+		Discard:brown1
+		Left:blue2
+		Left:green2
+		Right:red4
+		Right:yellow2
+		Bought:blue2 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green3', 'red3', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 1	Tech.YELLOW: 1	Tech.BLUE: 3	Tech.RED: 2
+Cubes:
+	Cubes.WARRIOR: 3	Cubes.SCRIBE: 3	Cubes.LEADER: 4	Cubes.RELIGION: 3	Cubes.MONUMENT: 5	Cubes.POW: 5	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:yellow1
+		Left:brown2
+		Left:green3
+		Right:blue2
+		Right:yellow2
+		Bought:red3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown3', 'green2', 'red3', 'yellow2']
+Tech:
+	Tech.GREEN: 2	Tech.YELLOW: 2	Tech.BLUE: 4	Tech.RED: 1
+Cubes:
+	Cubes.WARRIOR: 3	Cubes.SCRIBE: 5	Cubes.LEADER: 1	Cubes.RELIGION: 6	Cubes.MONUMENT: 5	Cubes.POW: 4	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:blue0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:yelllow0
+		Left:brown0
+		Left:green0
+		Right:blue0
+		Right:yellow1
+		Bought:brown1
+	Turn 3
+		Discard:brown0
+		Left:blue0
+		Left:green0
+		Right:brown1
+		Right:yellow1
+		Bought:blue2
+	Turn 4
+		Discard:blue0
+		Left:green0
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:green2
+	Turn 5
+		Discard:green0
+		Left:green2
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:red3
+	Turn 6
+		Discard:brown1
+		Left:blue2
+		Left:yellow1
+		Right:green2
+		Right:red3
+		Bought:yellow2
+	Turn 7
+		Discard:yellow1
+		Left:blue2
+		Left:yellow2
+		Right:green2
+		Right:red3
+		Bought:brown3 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'blue2', 'green2', 'red4', 'yellow2']
+Tech:
+	Tech.BROWN: 4	Tech.GREEN: 3	Tech.YELLOW: 1	Tech.BLUE: 1
+Cubes:
+	Cubes.WARRIOR: 2	Cubes.SCRIBE: 6	Cubes.LEADER: 2	Cubes.RELIGION: 8	Cubes.MONUMENT: 3	Cubes.POW: 4	Cubes.POP: 3
+Events:
+Turn 1
+		Discard:brown0
+		Left:green0
+		Left:red0
+		Right:blue0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:green0
+		Left:red0
+		Left:yelllow0
+		Right:blue0
+		Right:yellow1
+		Bought:brown1
+	Turn 3
+		Discard:yelllow0
+		Left:red0
+		Left:yellow1
+		Right:blue0
+		Right:brown1
+		Bought:blue2
+	Turn 4
+		Discard:red0
+		Left:blue0
+		Left:yellow1
+		Right:blue2
+		Right:brown1
+		Bought:green2
+	Turn 5
+		Discard:blue0
+		Left:brown1
+		Left:yellow1
+		Right:blue2
+		Right:green2
+		Bought:yellow2
+	Turn 6
+		Discard:yellow1
+		Left:green2
+		Left:yellow2
+		Right:blue2
+		Right:brown1
+		Bought:red4
+	Turn 7
+		Discard:brown1
+		Left:blue2
+		Left:green2
+		Right:red4
+		Right:yellow2
+		Bought:blue2 - 
+Tech Score: 69.5
+-----------------------------------
+Hand: ['blue2', 'brown2', 'green2', 'red3', 'yellow2']
+Tech:
+	Tech.GREEN: 5	Tech.YELLOW: 4
+Cubes:
+	Cubes.WARRIOR: 2	Cubes.SCRIBE: 5	Cubes.LEADER: 1	Cubes.RELIGION: 6	Cubes.MONUMENT: 6	Cubes.POW: 4	Cubes.POP: 3
+Events:
+Turn 1
+		Discard:red0
+		Left:blue0
+		Left:brown0
+		Right:green0
+		Right:yelllow0
+		Bought:yellow1
+	Turn 2
+		Discard:yelllow0
+		Left:blue0
+		Left:brown0
+		Right:green0
+		Right:yellow1
+		Bought:brown1
+	Turn 3
+		Discard:green0
+		Left:brown0
+		Left:brown1
+		Right:blue0
+		Right:yellow1
+		Bought:green2
+	Turn 4
+		Discard:brown0
+		Left:blue0
+		Left:brown1
+		Right:green2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:blue0
+		Left:blue2
+		Left:yellow1
+		Right:brown1
+		Right:green2
+		Bought:yellow2
+	Turn 6
+		Discard:brown1
+		Left:yellow1
+		Left:yellow2
+		Right:blue2
+		Right:green2
+		Bought:brown2
+	Turn 7
+		Discard:yellow1
+		Left:green2
+		Left:yellow2
+		Right:blue2
+		Right:brown2
+		Bought:red3 - 
+Tech Score: 66.0
+-----------------------------------
