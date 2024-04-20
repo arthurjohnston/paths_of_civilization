@@ -120,7 +120,7 @@ class PlayerState:
         if(cube.type==Cubes.POP):
             increase_in_population = pop_to_allowed_and_bonus[self.cubes[cube.type]]
             self.collectable_limit =increase_in_population[0]
-            self.events.append(f"\t Increasing collectable_limit to {increase_in_population[0]}")
+            self.events.append(f"\tIncreasing collectable limit to {increase_in_population[0]}")
             if increase_in_population[1] is not None:
                 self.add_cube_amount(CubeAmount(increase_in_population[1])) 
     def tech_score(self):
@@ -144,8 +144,8 @@ class PlayerState:
         return copy.deepcopy(self)
 
     def __str__(self):
-        tech_str = "".join([f"\t{tech.name}: {amount}" for tech, amount in sorted(self.techs.items())])
-        cube_str = "".join([f"\t{cube.name}: {amount}" for cube, amount in sorted(self.cubes.items())])
+        tech_str = "".join([f"  {tech.name}: {amount}" for tech, amount in sorted(self.techs.items())])
+        cube_str = "".join([f"  {cube.name}: {amount}" for cube, amount in sorted(self.cubes.items())])
         # todo add current collectable amount
         events_str = "\n\t".join(self.events)
         return f"Events:\n{events_str}\nHand: {self.convert_hand_to_list()}\nTech:\n{tech_str}\nCubes:\n{cube_str}\n"
@@ -197,7 +197,11 @@ def runCode():
                     card_placement.remove_card_from_hand(card_name)
                 
                 # step 3 add left resource
-                # todo add population check
+                # todo: if pop too low they this splits into choices
+                total_productions = sum(cube.value for card_name in left_group for cube in playable_cards[card_name].left)
+                if total_productions> card_placement.collectable_limit:
+                    card_placement.events.append("\tOver collectable for cubes limit!!")
+
                 for card_name in left_group:
                     card_placement.events.append("\tLeft:"+str(card_name))
                     for cube in playable_cards[card_name].left:
@@ -205,7 +209,11 @@ def runCode():
                 # Step 4 buy wonders & leaders
             
                 # Step 5 add right resource
-                # todo add pop check
+                # todo: if pop too low they this splits into choices
+                total_productions = sum(cube.value for card_name in right_group for cube in playable_cards[card_name].left)
+                if total_productions> card_placement.collectable_limit:
+                    card_placement.events.append("\tOver collectable for tech limit!!")
+
                 for card_name in right_group:
                     card_placement.events.append("\tRight:"+str(card_name))
                     for tech in playable_cards[card_name].right:
@@ -229,14 +237,16 @@ def runCode():
                                 print("something bad"+bonus)
                         #print(next_turn_starting)
                         next_turn_starts.add(next_turn_starting)
-                        #print("---------")
+                        
+                        if (turn in {3,5,7,9}):
+                            next_turn_starting.events.append("\tScoring for scribes")
         print(datetime.datetime.now())
         print(f"At end of {turn} there are {len(next_turn_starts)} possible")
             # copy over the starts for next turn and reset next_turn_starts to 
             # be used for the following turn
         
         starts_of_turn =take10k(sorted(next_turn_starts, key=lambda turn: turn.tech_score(), reverse=True))
-        print(f"At end of {turn} there are {len(starts_of_turn)} possible")
+        print(f"At end of {turn} there are {len(starts_of_turn)} possible after filtering")
         
         next_turn_starts=set() #reset possibilities for next 
     
