@@ -1,0 +1,57 @@
+At end of Turn 7
+Hand: ['blue2', 'brown2', 'green3', 'red4', 'yellow2']
+Tech:
+	Tech.BROWN: 3	Tech.GREEN: 2	Tech.YELLOW: 1	Tech.BLUE: 1
+Cubes:
+	Cubes.WARRIOR: 3	Cubes.SCRIBE: 4	Cubes.LEADER: 3	Cubes.RELIGION: 5	Cubes.MONUMENT: 4	Cubes.POW: 6	Cubes.POP: 4
+Events:
+Turn 1
+		Discard:blue0
+		Left:green0
+		Left:yelllow0
+		Right:brown0
+		Right:red0
+		Bought:red1
+	Turn 2
+		Discard:red0
+		Left:brown0
+		Left:green0
+		Right:red1
+		Right:yelllow0
+		Bought:yellow1
+	Turn 3
+		Discard:brown0
+		Left:green0
+		Left:yelllow0
+		Right:red1
+		Right:yellow1
+		Bought:brown2
+	Turn 4
+		Discard:green0
+		Left:red1
+		Left:yelllow0
+		Right:brown2
+		Right:yellow1
+		Bought:blue2
+	Turn 5
+		Discard:yelllow0
+		Left:red1
+		Left:yellow1
+		Right:blue2
+		Right:brown2
+		Bought:green3
+	Turn 6
+		Discard:red1
+		Left:brown2
+		Left:yellow1
+		Right:blue2
+		Right:green3
+		Bought:yellow2
+	Turn 7
+		Discard:yellow1
+		Left:green3
+		Left:yellow2
+		Right:blue2
+		Right:brown2
+		Bought:red4 - 
+Tech Score: 72.0

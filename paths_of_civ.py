@@ -60,16 +60,16 @@ def get_card_combinations(cards):
 
     return list(all_combinations)
 
-
-#    0:4,
-#    1:5, leader
-#    2: 6
-#    3: leader
-#    4: 7
-#    5:leader
-#    6: 8 leader
-#    7: leader
-#    8: leader 9
+pop_to_allowed_and_bonus = {
+    0:(4,None),
+    1:(5, Cubes.LEADER),
+    2:(6,None),
+    3:(6,Cubes.LEADER),
+    4:(7,None),
+    5:(7,Cubes.LEADER),
+    6: (8, Cubes.LEADER),
+    7: (8,Cubes.LEADER),
+    8: (9,Cubes.LEADER)}
 #    9: 1 vp
 #    10:10, 2 vp
 #    +1 up to 12 
@@ -82,6 +82,7 @@ class PlayerState:
         self.techs = Counter()
         self.cubes = Counter()
         self.events = []
+        self.collectable_limit = 4;
 
     def __eq__(self, other):
         if isinstance(other, PlayerState):
@@ -116,13 +117,12 @@ class PlayerState:
 
     def add_cube_amount(self, cube):
         self.cubes[cube.type] += cube.value
-
-    def remove_cube_amount(self, cube):
-        if cube.type in self.cubes:
-            self.cubes[cube.type] -= cube.value
-            if self.cubes[cube.type] <= 0:
-                del self.cubes[cube.type]
-
+        if(cube.type==Cubes.POP):
+            increase_in_population = pop_to_allowed_and_bonus[self.cubes[cube.type]]
+            self.collectable_limit =increase_in_population[0]
+            self.events.append(f"\t Increasing collectable_limit to {increase_in_population[0]}")
+            if increase_in_population[1] is not None:
+                self.add_cube_amount(CubeAmount(increase_in_population[1])) 
     def tech_score(self):
         score = 0
         for card_name in self.hand.elements():
@@ -142,18 +142,13 @@ class PlayerState:
         return sorted(self.hand.elements())
     def deepcopy(self):
         return copy.deepcopy(self)
-    def __str__(self):
-        tech_str = "".join([f"\t{tech}: {amount}" for tech, amount in sorted(self.techs.items())])
-        cube_str = "".join([f"\t{cube}: {amount}" for cube, amount in sorted(self.cubes.items())])
-        events_str = "\n\t".join(self.events)
-        return f"Hand: {self.convert_hand_to_list()}\nTech:\n{tech_str}\nCubes:\n{cube_str}\nEvents:\n{events_str}"
-        #return f"Hand: {self.convert_hand_to_list()}\nTech:\n{tech_str}\nCubes:\n{cube_str}"
 
-    def copy(self):
-        new_state = PlayerState(copy.deepcopy(self.hand))
-        new_state.techs = copy.deepcopy(self.techs)
-        new_state.cubes = copy.deepcopy(self.cubes)
-        return new_state
+    def __str__(self):
+        tech_str = "".join([f"\t{tech.name}: {amount}" for tech, amount in sorted(self.techs.items())])
+        cube_str = "".join([f"\t{cube.name}: {amount}" for cube, amount in sorted(self.cubes.items())])
+        # todo add current collectable amount
+        events_str = "\n\t".join(self.events)
+        return f"Events:\n{events_str}\nHand: {self.convert_hand_to_list()}\nTech:\n{tech_str}\nCubes:\n{cube_str}\n"
 
 def take10k(ranked_list):
     top_1000 = ranked_list[:1000]
@@ -183,7 +178,7 @@ def runCode():
     turn_1_player_state =PlayerState(turn_1_hand) #todo add board specific bonus
     starts_of_turn = [turn_1_player_state]
     next_turn_starts=set()
-    for turn in range(1,8):
+    for turn in range(1,4):
         for starting in starts_of_turn:
             starting.events.append(f"Turn {turn}")
             # step 1 generate all 30 card placements for this hand

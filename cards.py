@@ -171,7 +171,11 @@ class Card:
         return f"Cost: {self.cost.value} {cost_type}, Bonus: {bonus_str}, Right: [{right}], Left: [{left}]"
 
 
-
+# brown makes green 1,2,2,2 & red 1,1,2,3
+# red makes brown & blue
+# blue makes red & yellow 
+# yellow makes blue & green
+# green makes yellow & brown
 
 # https://boardgamegeek.com/image/8141472/path-of-civilization
 brown1 = Card(cost=TechAmount(Tech.BROWN,1 ),
