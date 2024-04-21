@@ -115,6 +115,11 @@ class PlayerState:
     def has_enough_tech(self, tech):
         return self.techs[tech.type] >= tech.value
 
+    def amount_cubes(self, cubeType):
+        return self.cubes[cubeType] 
+    def clear_cube(self, cubeType):
+        del self.cubes[cubeType]
+
     def add_cube_amount(self, cube):
         self.cubes[cube.type] += cube.value
         if(cube.type==Cubes.POP):
@@ -123,6 +128,7 @@ class PlayerState:
             self.events.append(f"\tIncreasing collectable limit to {increase_in_population[0]}")
             if increase_in_population[1] is not None:
                 self.add_cube_amount(CubeAmount(increase_in_population[1])) 
+
     def tech_score(self):
         score = 0
         for card_name in self.hand.elements():
@@ -178,6 +184,7 @@ def runCode():
     turn_1_player_state =PlayerState(turn_1_hand) #todo add board specific bonus
     starts_of_turn = [turn_1_player_state]
     next_turn_starts=set()
+    # todo make this a parameter
     for turn in range(1,4):
         for starting in starts_of_turn:
             starting.events.append(f"Turn {turn}")
@@ -203,9 +210,12 @@ def runCode():
                     card_placement.events.append("\tOver collectable for cubes limit!!")
 
                 for card_name in left_group:
-                    card_placement.events.append("\tLeft:"+str(card_name))
+                    result = ""
                     for cube in playable_cards[card_name].left:
                         card_placement.add_cube_amount(cube)
+                        result += str(cube) + " "
+                    card_placement.events.append(f"\tLeft:{str(card_name)} collecting {result}")
+                    
                 # Step 4 buy wonders & leaders
             
                 # Step 5 add right resource
@@ -215,9 +225,12 @@ def runCode():
                     card_placement.events.append("\tOver collectable for tech limit!!")
 
                 for card_name in right_group:
-                    card_placement.events.append("\tRight:"+str(card_name))
+                    result = ""
                     for tech in playable_cards[card_name].right:
                         card_placement.add_tech_amount(tech)
+                        result += str(tech) + " "
+                    card_placement.events.append(f"\tRight:{str(card_name)} collecting {result}")
+                    
                 #step 6 buy card
                 #check which techs you have enough of
                 
@@ -226,20 +239,32 @@ def runCode():
                         #print("can afford card")
                         next_turn_starting = card_placement.deepcopy()
                         next_turn_starting.add_card_to_hand(card_name)
-                        next_turn_starting.events.append("\tBought:"+str(card_name))
                         next_turn_starting.remove_tech_amount(card.cost)
+                        result = ""
+
                         for bonus in  card.bonus:
+                            result += str(bonus) + " "
                             if isinstance(bonus, TechAmount):
                                 next_turn_starting.add_tech_amount(bonus)
                             elif isinstance(bonus, CubeAmount):
                                 next_turn_starting.add_cube_amount(bonus)
                             else:
                                 print("something bad"+bonus)
-                        #print(next_turn_starting)
+                        next_turn_starting.events.append(f"\tBought:{str(card_name)} collecting {result}")
                         next_turn_starts.add(next_turn_starting)
                         
                         if (turn in {3,5,7,9}):
-                            next_turn_starting.events.append("\tScoring for scribes")
+                            amount=next_turn_starting.amount_cubes(Cubes.SCRIBE)
+                            next_turn_starting.clear_cube(Cubes.SCRIBE)
+                            next_turn_starting.events.append(f"\tScoring for event with {amount} scribes")
+
+                        if (turn in {4,6,8,9}):
+                            # warriors are worth 2
+                            amount = next_turn_starting.amount_cubes(Cubes.WARRIOR)*2
+                            amount+=next_turn_starting.amount_cubes(Cubes.POW)
+                            next_turn_starting.clear_cube(Cubes.WARRIOR)
+                            next_turn_starting.events.append(f"\tScoring for war with {amount} warriors and POWs")
+                            
         print(datetime.datetime.now())
         print(f"At end of {turn} there are {len(next_turn_starts)} possible")
             # copy over the starts for next turn and reset next_turn_starts to 
@@ -258,9 +283,9 @@ def runCode():
         print(f"{obj} - \nTech Score: {obj.tech_score()}")
         print("-----------------------------------")
     #  Print the worst
-    for i, obj in enumerate(sorted_objects[-1:]):
-        print(f"{obj} - \nTech Score: {obj.tech_score()}")
-        print("-----------------------------------")
+    #for i, obj in enumerate(sorted_objects[-1:]):
+    #    print(f"{obj} - \nTech Score: {obj.tech_score()}")
+    #    print("-----------------------------------")
 
 if __name__ == '__main__':
     runCode()

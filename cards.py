@@ -40,7 +40,7 @@ class TechAmount:
     def __hash__(self):
         return hash((self.type, self.value))
     def __str__(self):
-        return f"{self.value} {self.type}"
+        return f"{self.type.name}:{self.value}"
     def __add__(self, other):
         if isinstance(other, TechAmount) and self.type == other.type:
             return TechAmount(self.type, self.value + other.value)
@@ -95,9 +95,7 @@ class CubeAmount:
     def __hash__(self):
         return hash((self.type, self.value))
     def __str__(self):
-        return f"{self.value} {self.type}"
-    def __str__(self):
-        return f"{self.value} {self.type}"
+        return f"{self.type.name}:{self.value}"
 
     def __add__(self, other):
         if isinstance(other, CubeAmount) and self.type == other.type:
