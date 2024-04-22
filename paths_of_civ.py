@@ -60,6 +60,12 @@ def get_card_combinations(cards):
 
     return list(all_combinations)
 
+# religion_level
+# 2 x1 3
+# 2 x1 6
+# 3 x2 10
+# 4 x2 15
+# 5 x3 21
 pop_to_allowed_and_bonus = {
     0:(4,None),
     1:(5, Cubes.LEADER),
@@ -83,6 +89,7 @@ class PlayerState:
         self.cubes = Counter()
         self.events = []
         self.collectable_limit = 4;
+        self.paths_to_this_state = 1;
 
     def __eq__(self, other):
         if isinstance(other, PlayerState):
@@ -135,8 +142,8 @@ class PlayerState:
                 for tech in playable_cards[card_name].right:
                     score += tech.value * 3
         #score += sum(self.techs.values())
-        for cube, value in self.cubes.items():
-            score += value/ 2
+        #for cube, value in self.cubes.items():
+            #score += value/ 2
         for tech, value in self.techs.items():
             score += value/ 2
         return score
@@ -150,11 +157,16 @@ class PlayerState:
         return copy.deepcopy(self)
 
     def __str__(self):
-        tech_str = "".join([f"  {tech.name}: {amount}" for tech, amount in sorted(self.techs.items())])
-        cube_str = "".join([f"  {cube.name}: {amount}" for cube, amount in sorted(self.cubes.items())])
+        tech_str = "".join([f" {tech.name}:{amount}" for tech, amount in sorted(self.techs.items())])
+        cube_str = "".join([f" {cube.name}:{amount}" for cube, amount in sorted(self.cubes.items())])
         # todo add current collectable amount
         events_str = "\n\t".join(self.events)
         return f"Events:\n{events_str}\nHand: {self.convert_hand_to_list()}\nTech:\n{tech_str}\nCubes:\n{cube_str}\n"
+    def log_cubes_and_tech(self):
+        tech_str = "".join([f" {tech.name}:{amount}" for tech, amount in sorted(self.techs.items())])
+        cube_str = "".join([f" {cube.name}:{amount}" for cube, amount in sorted(self.cubes.items())])
+        # todo add current collectable amount
+        self.events.append(f"\tAt end of turn have{tech_str}{cube_str}")
 
 def take10k(ranked_list):
     top_1000 = ranked_list[:1000]
@@ -185,7 +197,7 @@ def runCode():
     starts_of_turn = [turn_1_player_state]
     next_turn_starts=set()
     # todo make this a parameter
-    for turn in range(1,4):
+    for turn in range(1,6):
         for starting in starts_of_turn:
             starting.events.append(f"Turn {turn}")
             # step 1 generate all 30 card placements for this hand
@@ -251,7 +263,6 @@ def runCode():
                             else:
                                 print("something bad"+bonus)
                         next_turn_starting.events.append(f"\tBought:{str(card_name)} collecting {result}")
-                        next_turn_starts.add(next_turn_starting)
                         
                         if (turn in {3,5,7,9}):
                             amount=next_turn_starting.amount_cubes(Cubes.SCRIBE)
@@ -264,6 +275,8 @@ def runCode():
                             amount+=next_turn_starting.amount_cubes(Cubes.POW)
                             next_turn_starting.clear_cube(Cubes.WARRIOR)
                             next_turn_starting.events.append(f"\tScoring for war with {amount} warriors and POWs")
+                        next_turn_starting.log_cubes_and_tech()
+                        next_turn_starts.add(next_turn_starting)
                             
         print(datetime.datetime.now())
         print(f"At end of {turn} there are {len(next_turn_starts)} possible")
