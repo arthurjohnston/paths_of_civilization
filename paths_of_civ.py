@@ -75,7 +75,13 @@ pop_to_allowed_and_bonus = {
     5:(7,Cubes.LEADER),
     6: (8, Cubes.LEADER),
     7: (8,Cubes.LEADER),
-    8: (9,Cubes.LEADER)}
+    8: (9,Cubes.LEADER),
+    9: (9,None), # 1 vp
+    10: (10,None), # 2 vp
+    11: (10,None), # 3 vp
+    12: (10,None), # 4 vp
+    13: (10,None) # still just 4
+    }
 #    9: 1 vp
 #    10:10, 2 vp
 #    +1 up to 12 
@@ -191,13 +197,13 @@ def take10k(ranked_list):
     
     return result
     
-def runCode():
+def runCode(turns):
     turn_1_hand = list(starting_cards.keys())
     turn_1_player_state =PlayerState(turn_1_hand) #todo add board specific bonus
     starts_of_turn = [turn_1_player_state]
     next_turn_starts=set()
     # todo make this a parameter
-    for turn in range(1,6):
+    for turn in range(1,turns+1):
         for starting in starts_of_turn:
             starting.events.append(f"Turn {turn}")
             # step 1 generate all 30 card placements for this hand
@@ -296,9 +302,9 @@ def runCode():
         print(f"{obj} - \nTech Score: {obj.tech_score()}")
         print("-----------------------------------")
     #  Print the worst
-    #for i, obj in enumerate(sorted_objects[-1:]):
-    #    print(f"{obj} - \nTech Score: {obj.tech_score()}")
-    #    print("-----------------------------------")
+    for i, obj in enumerate(sorted_objects[-10:]):
+        print(f"{obj} - \nTech Score: {obj.tech_score()}")
+        print("-----------------------------------")
 
 if __name__ == '__main__':
-    runCode()
+    runCode(turns=8)

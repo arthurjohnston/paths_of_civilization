@@ -9,8 +9,8 @@ class Cubes(Enum):
     LEADER = 3
     RELIGION = 4
     MONUMENT = 6
-    POW = 7
-    POP = 8
+    POW = 7 #should be worker
+    POP = 8 #should be worker
     def __lt__(self, other):
         if isinstance(other, Cubes):
             return self.value < other.value
