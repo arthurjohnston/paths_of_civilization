@@ -2,6 +2,8 @@ import itertools
 from cards import *
 import datetime
 import cProfile
+import sys
+from collections import Counter
 
 # fix this to handle duplicate cards properly, currently itertools treats them as the same
 def get_card_combinations_old(cards):
@@ -86,7 +88,6 @@ pop_to_allowed_and_bonus = {
 #    10:10, 2 vp
 #    +1 up to 12 
 #
-from collections import Counter
 
 class PlayerState:
     def __init__(self, hand):
@@ -197,7 +198,7 @@ def take10k(ranked_list):
     
     return result
     
-def runCode(turns):
+def runCode(turns, top_N_to_print):
     turn_1_hand = list(starting_cards.keys())
     turn_1_player_state =PlayerState(turn_1_hand) #todo add board specific bonus
     starts_of_turn = [turn_1_player_state]
@@ -297,14 +298,21 @@ def runCode(turns):
     sorted_objects = sorted(starts_of_turn, key=lambda obj: obj.tech_score(), reverse=True)
     #sorted_objects = sorted(starts_of_turn, key=lambda obj: str(obj), reverse=True)
     
-    # Print the top ten objects
-    for i, obj in enumerate(sorted_objects[:50]):
+    # Print the top objects
+    for i, obj in enumerate(sorted_objects[:top_N_to_print]):
         print(f"{obj} - \nTech Score: {obj.tech_score()}")
         print("-----------------------------------")
     #  Print the worst
-    for i, obj in enumerate(sorted_objects[-10:]):
-        print(f"{obj} - \nTech Score: {obj.tech_score()}")
-        print("-----------------------------------")
+    #for i, obj in enumerate(sorted_objects[-10:]):
+    #    print(f"{obj} - \nTech Score: {obj.tech_score()}")
+    #    print("-----------------------------------")
 
 if __name__ == '__main__':
-    runCode(turns=8)
+    turns = 3
+    top_N_to_print = 30
+    if(len(sys.argv)>=2):
+        turns = int(sys.argv[1])
+
+    if(len(sys.argv)==3):
+        top_N_to_print = int(sys.argv[2])
+    runCode(turns,top_N_to_print)
