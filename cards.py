@@ -333,7 +333,7 @@ green0  = Card(cost=TechAmount(Tech.GREEN,0),left=[],
 starting_cards = {
     "brown0":brown0,
     "red0":red0,
-    "yelllow0":yellow0,
+    "yellow0":yellow0,
     "blue0":blue0,
     "green0":green0
 }
