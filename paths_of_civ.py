@@ -175,29 +175,24 @@ class PlayerState:
         # todo add current collectable amount
         self.events.append(f"\tAt end of turn have{tech_str}{cube_str}")
 
-def take10k(ranked_list):
-    top_1000 = ranked_list[:1000]
+import random
+
+def get_top_x_and_sampling_y(rankedList, X, Y):
+    # Check if the list is smaller than X+Y, return the entire list in that case
+    if len(rankedList) <= X + Y:
+        return rankedList
+
+    # Get the first X items
+    firstXItems = rankedList[:X]
     
-    # Calculate how many items to take from each section
-    num_sections = min(len(ranked_list) - 1000, 9000)
-    items_per_section = num_sections // 9000
-    extra_items = num_sections % 9000
+    # Get a random sample of size Y from the rest of the list
+    restOfList = rankedList[X:]
+    sampleY = random.sample(restOfList, Y)
     
-    # Take items equally distributed across the rest of the list
-    distributed_items = []
-    start_index = 1000
-    end_index = 1000 + items_per_section + (1 if extra_items > 0 else 0)
-    for _ in range(9000):
-        distributed_items.extend(ranked_list[start_index:end_index])
-        start_index = end_index
-        end_index = start_index + items_per_section + (1 if extra_items > 0 else 0)
-        extra_items -= 1 if extra_items > 0 else 0
-    
-    # Combined list of top 1000 and equally distributed items
-    result = top_1000 + distributed_items
-    
+    # Concatenate the first X items and the sample of size Y
+    result = firstXItems + sampleY
     return result
-    
+
 def runCode(turns, top_N_to_print):
     turn_1_hand = list(starting_cards.keys())
     turn_1_player_state =PlayerState(turn_1_hand) #todo add board specific bonus
@@ -289,8 +284,8 @@ def runCode(turns, top_N_to_print):
         print(f"At end of {turn} there are {len(next_turn_starts)} possible")
             # copy over the starts for next turn and reset next_turn_starts to 
             # be used for the following turn
-        
-        starts_of_turn =take10k(sorted(next_turn_starts, key=lambda turn: turn.tech_score(), reverse=True))
+        sorted_turns = sorted(next_turn_starts, key=lambda turn: turn.tech_score(), reverse=True)
+        starts_of_turn =get_top_x_and_sampling_y(sorted_turns,1000,9000)
         print(f"At end of {turn} there are {len(starts_of_turn)} possible after filtering")
         
         next_turn_starts=set() #reset possibilities for next 
