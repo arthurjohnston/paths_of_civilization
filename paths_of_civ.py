@@ -148,9 +148,6 @@ class PlayerState:
         for card_name in self.hand.elements():
                 for tech in playable_cards[card_name].right:
                     score += tech.value * 3
-        #score += sum(self.techs.values())
-        #for cube, value in self.cubes.items():
-            #score += value/ 2
         for tech, value in self.techs.items():
             score += value/ 2
         return score
@@ -247,7 +244,6 @@ def runCode(turns, top_N_to_print):
                     
                 #step 6 buy card
                 #check which techs you have enough of
-                
                 for card_name, card in buyable_cards.items():
                     if card_placement.has_enough_tech(card.cost):
                         #print("can afford card")
@@ -274,9 +270,9 @@ def runCode(turns, top_N_to_print):
                         if (turn in {4,6,8,9}):
                             # warriors are worth 2
                             amount = next_turn_starting.amount_cubes(Cubes.WARRIOR)*2
-                            amount+=next_turn_starting.amount_cubes(Cubes.POW)
+                            amount+=next_turn_starting.amount_cubes(Cubes.MILITARY_POWER)
                             next_turn_starting.clear_cube(Cubes.WARRIOR)
-                            next_turn_starting.events.append(f"\tScoring for war with {amount} warriors and POWs")
+                            next_turn_starting.events.append(f"\tScoring for war with {amount} warriors and MILITARY_POWER")
                         next_turn_starting.log_cubes_and_tech()
                         next_turn_starts.add(next_turn_starting)
                             

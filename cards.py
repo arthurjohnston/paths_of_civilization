@@ -9,8 +9,8 @@ class Cubes(Enum):
     LEADER = 3
     RELIGION = 4
     MONUMENT = 6
-    POW = 7 #should be worker
-    POP = 8 #should be worker
+    MILITARY_POWER = 7 
+    POP = 8 
     def __lt__(self, other):
         if isinstance(other, Cubes):
             return self.value < other.value
@@ -184,17 +184,17 @@ brown1 = Card(cost=TechAmount(Tech.BROWN,1 ),
 brown2 = Card(cost=TechAmount(Tech.BROWN,4 ),
     left=[CubeAmount(Cubes.MONUMENT,1), CubeAmount(Cubes.LEADER,1)],
     right=[TechAmount(Tech.GREEN,2),TechAmount(Tech.RED,1)],
-    bonus=[CubeAmount(Cubes.MONUMENT,2), CubeAmount(Cubes.POW,1)])
+    bonus=[CubeAmount(Cubes.MONUMENT,2), CubeAmount(Cubes.MILITARY_POWER,1)])
 
 brown3 = Card(cost=TechAmount(Tech.BROWN,7 ),
     left=[CubeAmount(Cubes.MONUMENT,2), CubeAmount(Cubes.LEADER,1)],
     right=[TechAmount(Tech.GREEN,2),TechAmount(Tech.RED,2)],
-    bonus=[CubeAmount(Cubes.MONUMENT,3), CubeAmount(Cubes.POW,1), CubeAmount(Cubes.POP,1)])
+    bonus=[CubeAmount(Cubes.MONUMENT,3), CubeAmount(Cubes.MILITARY_POWER,1), CubeAmount(Cubes.POP,1)])
 
 brown4 = Card(cost=TechAmount(Tech.BROWN,10 ),
     left=[CubeAmount(Cubes.MONUMENT,2), CubeAmount(Cubes.LEADER,1), CubeAmount(Cubes.WARRIOR)],
     right=[TechAmount(Tech.GREEN,2),TechAmount(Tech.RED,3)],
-    bonus=[CubeAmount(Cubes.MONUMENT,4), CubeAmount(Cubes.POW,2), CubeAmount(Cubes.POP,1)])
+    bonus=[CubeAmount(Cubes.MONUMENT,4), CubeAmount(Cubes.MILITARY_POWER,2), CubeAmount(Cubes.POP,1)])
 
 
 browns=[brown1, brown2,brown3,brown4]
@@ -202,22 +202,22 @@ browns=[brown1, brown2,brown3,brown4]
 red1 = Card(cost=TechAmount(Tech.RED,1 ),
     left=[CubeAmount(Cubes.WARRIOR,1)],
     right=[TechAmount(Tech.BROWN,1),TechAmount(Tech.BLUE,1)],
-    bonus=[CubeAmount(Cubes.POW,1)])
+    bonus=[CubeAmount(Cubes.MILITARY_POWER,1)])
 
 red2 = Card(cost=TechAmount(Tech.RED,4 ),
     left=[CubeAmount(Cubes.WARRIOR,1), CubeAmount(Cubes.MONUMENT,1)],
     right=[TechAmount(Tech.BROWN,2),TechAmount(Tech.BLUE,1)],
-    bonus=[CubeAmount(Cubes.POW,2), CubeAmount(Cubes.RELIGION,1)])
+    bonus=[CubeAmount(Cubes.MILITARY_POWER,2), CubeAmount(Cubes.RELIGION,1)])
 
 red3 = Card(cost=TechAmount(Tech.RED,7 ),
     left=[CubeAmount(Cubes.WARRIOR,2), CubeAmount(Cubes.MONUMENT,1)],
     right=[TechAmount(Tech.BROWN,2),TechAmount(Tech.BLUE,2)],
-    bonus=[CubeAmount(Cubes.POW,3), CubeAmount(Cubes.RELIGION,1), CubeAmount(Cubes.WARRIOR,1)])
+    bonus=[CubeAmount(Cubes.MILITARY_POWER,3), CubeAmount(Cubes.RELIGION,1), CubeAmount(Cubes.WARRIOR,1)])
 
 red4 = Card(cost=TechAmount(Tech.RED,10 ),
     left=[CubeAmount(Cubes.WARRIOR,2), CubeAmount(Cubes.MONUMENT,1), CubeAmount(Cubes.RELIGION)],
     right=[TechAmount(Tech.BROWN,2),TechAmount(Tech.BLUE,3)],
-    bonus=[CubeAmount(Cubes.POW,4), CubeAmount(Cubes.RELIGION,2), CubeAmount(Cubes.WARRIOR,1)])
+    bonus=[CubeAmount(Cubes.MILITARY_POWER,4), CubeAmount(Cubes.RELIGION,2), CubeAmount(Cubes.WARRIOR,1)])
 
 
 reds=[red1, red2,red3,red4]
@@ -236,12 +236,12 @@ blue2 = Card(cost=TechAmount(Tech.BLUE,4 ),
 blue3 = Card(cost=TechAmount(Tech.BLUE,7 ),
     left=[CubeAmount(Cubes.RELIGION,2), CubeAmount(Cubes.WARRIOR,1)],
     right=[TechAmount(Tech.RED,2),TechAmount(Tech.YELLOW,2)],
-    bonus=[CubeAmount(Cubes.RELIGION,3), TechAmount(Tech.GREEN),CubeAmount(Cubes.POW,1)])
+    bonus=[CubeAmount(Cubes.RELIGION,3), TechAmount(Tech.GREEN),CubeAmount(Cubes.MILITARY_POWER,1)])
 
 blue4 = Card(cost=TechAmount(Tech.BLUE,10 ),
     left=[CubeAmount(Cubes.RELIGION,2), CubeAmount(Cubes.WARRIOR,1), CubeAmount(Cubes.SCRIBE)],
     right=[TechAmount(Tech.RED,2),TechAmount(Tech.YELLOW,3)],
-    bonus=[CubeAmount(Cubes.RELIGION,3), TechAmount(Tech.GREEN), TechAmount(Tech.BROWN),CubeAmount(Cubes.POW,1)])
+    bonus=[CubeAmount(Cubes.RELIGION,3), TechAmount(Tech.GREEN), TechAmount(Tech.BROWN),CubeAmount(Cubes.MILITARY_POWER,1)])
 
 
 blues=[blue1, blue2,blue3,blue4]
