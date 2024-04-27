@@ -148,8 +148,14 @@ class PlayerState:
         for card_name in self.hand.elements():
                 for tech in playable_cards[card_name].right:
                     score += tech.value * 3
+        # score tech based on if you can buy a good tech next turn
         for tech, value in self.techs.items():
-            score += value/ 2
+            if value >= 9:
+                score += 3
+            elif value >= 6:
+                score += 2
+            elif value >= 3:
+                score += 1
         return score
 
     def add_event(self, event):
@@ -293,10 +299,6 @@ def runCode(turns, top_N_to_print):
     for i, obj in enumerate(sorted_objects[:top_N_to_print]):
         print(f"{obj} - \nTech Score: {obj.tech_score()}")
         print("-----------------------------------")
-    #  Print the worst
-    #for i, obj in enumerate(sorted_objects[-10:]):
-    #    print(f"{obj} - \nTech Score: {obj.tech_score()}")
-    #    print("-----------------------------------")
 
 if __name__ == '__main__':
     turns = 3
