@@ -1,4 +1,4 @@
-This is a script to run a simulation of "Paths of Civilization" to understand what the optimal play order.
+This is a script to run a simulation of "Paths of Civilization" to understand what the optimal play order is.
 
 General usage is 
 ```
